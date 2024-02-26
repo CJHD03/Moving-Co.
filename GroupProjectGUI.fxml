@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finaltransportation.GUIController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="9.0" prefWidth="193.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="487.0" minWidth="10.0" prefWidth="277.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="487.0" minWidth="10.0" prefWidth="152.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="17.0" prefWidth="301.0" text="Date Interval" GridPane.rowIndex="2" />
+      <Label prefHeight="17.0" prefWidth="322.0" text="Start Time (Military Time)" GridPane.rowIndex="3" />
+      <Label prefHeight="17.0" prefWidth="302.0" text="Vehicle" GridPane.rowIndex="5" />
+      <Label prefHeight="17.0" prefWidth="323.0" text="Distance  (How Far?)" GridPane.rowIndex="6" />
+      <Label prefHeight="17.0" prefWidth="313.0" text="Self-Move?" GridPane.rowIndex="7" />
+      <Label text="Teleportation Transportation Company" GridPane.columnIndex="1" />
+      <ChoiceBox fx:id="VehicleChoiceBox" prefHeight="25.0" prefWidth="304.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </ChoiceBox>
+      <TextField fx:id="DistanceTextBox" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <DatePicker fx:id="dateInterval" prefHeight="25.0" prefWidth="281.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <CheckBox fx:id="SelfMoveCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <TextField fx:id="StartTimeTextBox" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <ImageView fitHeight="103.0" fitWidth="140.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+      </ImageView>
+      <Label prefHeight="17.0" prefWidth="193.0" text="Insurance Opt-in?" GridPane.rowIndex="8" />
+      <CheckBox fx:id="InsuranceCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Label prefHeight="17.0" prefWidth="191.0" text="Final Cost" GridPane.rowIndex="10" />
+      <Label prefHeight="17.0" prefWidth="208.0" text="Half Day or Full Day?" GridPane.rowIndex="4" />
+      <ChoiceBox fx:id="DayChoiceBox" prefHeight="25.0" prefWidth="286.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="FinalCostTextBox" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+      <Label prefHeight="17.0" prefWidth="210.0" text="Fragile or Heavy Items?" GridPane.rowIndex="9" />
+      <Label prefHeight="17.0" prefWidth="171.0" text="Heavy items = 50lbs +" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+      <ChoiceBox fx:id="FragHeavChoiceBox" prefHeight="25.0" prefWidth="275.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <Button mnemonicParsing="false" onAction="#CalculateButton" prefHeight="25.0" prefWidth="290.0" text="Calculate Total" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <Label prefHeight="18.0" prefWidth="329.0" text="NOTE: FLAT 100 DOLLAR CANCELATION FEE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label prefHeight="18.0" prefWidth="229.0" text="Estimated End Time" GridPane.rowIndex="11" />
+      <Button mnemonicParsing="false" onAction="#CalculateTimeButton" prefHeight="26.0" prefWidth="269.0" text="Calculate Time" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+      <TextField fx:id="FinalTimeTextField" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+      <TextField fx:id="WeightLimitTextField" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+   </children>
+</GridPane>
